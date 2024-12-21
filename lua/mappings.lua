@@ -19,3 +19,5 @@ map('i', '<Tab>', '<Tab>', { noremap = true, silent = true })
 map('n', '<Space>k', ':lua vim.lsp.buf.format()<CR>', {
     noremap = true, silent = true
 })
+
+map('n', '<C-k>', '<C-i>', { noremap = true, silent = true })
