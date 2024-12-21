@@ -10,7 +10,7 @@ local function mark_and_move(motion)
     end
 end
 
-for _, m in ipairs({ 'h', 'j', 'k', 'l', 'gg', 'GG' }) do
+for _, m in ipairs({ 'h', 'j', 'k', 'l' }) do
     map('n', m, mark_and_move(m), { noremap = true, silent = true })
 end
 
