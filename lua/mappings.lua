@@ -5,12 +5,18 @@ local map = vim.keymap.set
 local function mark_and_move(motion)
     return function()
         local count = vim.v.count > 0 and vim.v.count or ""
-        vim.cmd("normal! m'")
-        vim.cmd("normal! " .. count .. motion)
+        if count ~= "" then
+            print('a')
+            vim.cmd("normal! m'")
+            vim.cmd("normal! " .. count .. motion)
+        else
+            print('b')
+            vim.cmd("normal! " .. motion)
+        end
     end
 end
 
-for _, m in ipairs({ 'h', 'j', 'k', 'l' }) do
+for _, m in ipairs({ 'j', 'k' }) do
     map('n', m, mark_and_move(m), { noremap = true, silent = true })
 end
 
