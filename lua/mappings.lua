@@ -24,6 +24,10 @@ map('n', '<Space>k', ':lua vim.lsp.buf.format()<CR>', {
     noremap = true, silent = true
 })
 
+map('n', '<Space>ca', ':lua vim.lsp.buf.code_action()<CR>', {
+    noremap = true, silent = true
+})
+
 map('n', '<Space><Tab>', function() vim.cmd('ClangdSwitchSourceHeader') end, {
     noremap = true, silent = true
 })
