@@ -28,7 +28,7 @@ map('n', '<Space>ca', ':lua vim.lsp.buf.code_action()<CR>', {
     noremap = true, silent = true
 })
 
-map('n', '<Space><Tab>', function() vim.cmd('ClangdSwitchSourceHeader') end, {
+map('n', '<Space><Tab>', function() vim.cmd('LspClangdSwitchSourceHeader') end, {
     noremap = true, silent = true
 })
 
