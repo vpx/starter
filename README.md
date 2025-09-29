@@ -1,9 +1,17 @@
-**This repo is supposed to used as config by NvChad users!**
+### My neovim setup, based on NvChad.
 
-- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
-- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
-- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
+## Usage instructions
 
-# Credits
+1. Download and install [Neovim 0.11.4](
+https://github.com/neovim/neovim/releases/tag/v0.11.4).
 
-1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+2. Clone this repository as `~/.config/nvim`:
+```
+mv ~/.config/nvim ~/.config/nvim.old 2>/dev/null
+git clone https://github.com/crimilo/starter ~/.config/nvim
+```
+
+3. Open Neovim and run `!Mason` to display the mason UI and install your 
+desired language servers (update `lspconfig.lua` accordingly).
+
+4. Enjoy!
